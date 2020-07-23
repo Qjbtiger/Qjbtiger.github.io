@@ -1,0 +1,11 @@
+# hexo robot.txt
+User-agent: *
+Allow: /
+Allow: /about/
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+
+Disallow: 
+
+Sitemap: https://Qjbtiger.github.io/sitemap.xml

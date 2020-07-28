@@ -1,4 +1,4 @@
-# hexo robot.txt
+# hexo robots.txt
 User-agent: *
 Allow: /
 Allow: /about/

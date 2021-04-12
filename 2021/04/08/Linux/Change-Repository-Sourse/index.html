@@ -30,7 +30,7 @@
 <meta property="og:description" content="After you install some common softwares or programmers, usually the first thing you need to do is to change the source addresses of softwares or package managers for chinese users. Here are some commo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-08T08:15:22.000Z">
-<meta property="article:modified_time" content="2021-04-10T11:46:57.776Z">
+<meta property="article:modified_time" content="2021-04-12T03:05:10.355Z">
 <meta property="article:author" content="Qjbtiger">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -234,7 +234,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-10 19:46:57" itemprop="dateModified" datetime="2021-04-10T19:46:57+08:00">2021-04-10</time>
+                <time title="Modified: 2021-04-12 11:05:10" itemprop="dateModified" datetime="2021-04-12T11:05:10+08:00">2021-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -281,7 +281,7 @@
         <p>After you install some common softwares or programmers, usually the first thing you need to do is to change the source addresses of softwares or package managers for chinese users. Here are some common tutorials.</p>
 <a id="more"></a>
 
-<h2 id="Change-Apt-get-Repository-source"><a href="#Change-Apt-get-Repository-source" class="headerlink" title="Change Apt-get Repository source"></a>Change Apt-get Repository source</h2><h3 id="ubuntu20-04-LTS"><a href="#ubuntu20-04-LTS" class="headerlink" title="ubuntu20.04 LTS"></a>ubuntu20.04 LTS</h3><p>We take the ubuntu20.04 LTS as an example.</p>
+<h2 id="Change-Apt-get-Repository-Source"><a href="#Change-Apt-get-Repository-Source" class="headerlink" title="Change Apt-get Repository Source"></a>Change Apt-get Repository Source</h2><h3 id="ubuntu20-04-LTS"><a href="#ubuntu20-04-LTS" class="headerlink" title="ubuntu20.04 LTS"></a>ubuntu20.04 LTS</h3><p>We take the ubuntu20.04 LTS as an example.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak <span class="comment"># backup (optional)</span></span><br><span class="line">sudo vi /etc/apt/sources.list <span class="comment"># edit the source list file</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># file: /etc/apt/sources.list</span></span><br><span class="line"><span class="comment"># comment out the original content and add the content below (Tsinghua University source)</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">sudo apt-get update <span class="comment"># update list</span></span><br></pre></td></tr></table></figure>
 
 <p><strong><em>Attention</em></strong>:</p>
@@ -300,7 +300,11 @@
 </li>
 </ol>
 <p>Here are some famous repository source addresses (ubuntu20.04 LTS):</p>
+<details>
+<summary>Address</summary>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Tsinghua University</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment"># University of Science and Technologyof China</span></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ali Cloud</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+</details>
 
 <h3 id="Respberry-Pi"><a href="#Respberry-Pi" class="headerlink" title="Respberry Pi"></a>Respberry Pi</h3><p>The first thing you need to do is finding the code name of your respbian system version by command <code>lsb_release -a</code></p>
 <p>Take an example whose code name is <strong>“buster”</strong>(Respberry Pi 4b):</p>
@@ -312,7 +316,7 @@
 
 <p>If your system has another code name, just replace the code name part of the address and do the same thing.</p>
 <p>Don’t forget to execute <code>sudo apt-get update</code></p>
-<h2 id="Change-Pip-Repository-source"><a href="#Change-Pip-Repository-source" class="headerlink" title="Change Pip Repository source"></a>Change Pip Repository source</h2><p>Assuming you have successfully install <strong>Python3</strong> and <strong>Pip</strong> package manager, do the following steps.</p>
+<h2 id="Change-Pip-Repository-Source"><a href="#Change-Pip-Repository-Source" class="headerlink" title="Change Pip Repository Source"></a>Change Pip Repository Source</h2><p>Assuming you have successfully install <strong>Python3</strong> and <strong>Pip</strong> package manager, do the following steps.</p>
 <p>Temporary Use:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple <span class="comment"># use -i parameter</span></span><br></pre></td></tr></table></figure>
 
@@ -320,7 +324,20 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 
 <p>Here are some famous pip source addresses: </p>
+<details>
+<summary>Address</summary>
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://pypi.tuna.tsinghua.edu.cn/simple/ <span class="comment"># Tsinghua University</span></span><br><span class="line">https://pypi.mirrors.ustc.edu.cn/simple/ <span class="comment"># University of Science and Technologyof China</span></span><br><span class="line">http://mirrors.aliyun.com/pypi/simple/ <span class="comment"># Ali Cloud</span></span><br><span class="line">http://mirrors.myhuaweicloud.com/pypi/web/simple <span class="comment"># Huwwei Cloud</span></span><br></pre></td></tr></table></figure>
+</details>
+
+<h2 id="Change-Docker-Reposition-Address"><a href="#Change-Docker-Reposition-Address" class="headerlink" title="Change Docker Reposition Address"></a>Change Docker Reposition Address</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line"><span class="comment"># add the following content in daemon.json file</span></span><br><span class="line">&#123;</span><br><span class="line"> <span class="string">"registry-mirrors"</span>: [<span class="string">"https://registry.docker-cn.com"</span>]</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">sudo service docker restart <span class="comment"># restart docker</span></span><br></pre></td></tr></table></figure>
+
+<p>Here are some famous docker mirror reposition addresses: </p>
+<details>
+<summary>Address</summary>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://registry.docker-cn.com <span class="comment"># Docker china official address</span></span><br><span class="line">https://kfwkfulq.mirror.aliyuncs.com <span class="comment"># Ali Cloud</span></span><br></pre></td></tr></table></figure>
+</details>
     </div>
 
     
@@ -436,7 +453,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Apt-get-Repository-source"><span class="nav-number">1.</span> <span class="nav-text">Change Apt-get Repository source</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu20-04-LTS"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu20.04 LTS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Respberry-Pi"><span class="nav-number">1.2.</span> <span class="nav-text">Respberry Pi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Pip-Repository-source"><span class="nav-number">2.</span> <span class="nav-text">Change Pip Repository source</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Apt-get-Repository-Source"><span class="nav-number">1.</span> <span class="nav-text">Change Apt-get Repository Source</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu20-04-LTS"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu20.04 LTS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Respberry-Pi"><span class="nav-number">1.2.</span> <span class="nav-text">Respberry Pi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Pip-Repository-Source"><span class="nav-number">2.</span> <span class="nav-text">Change Pip Repository Source</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Docker-Reposition-Address"><span class="nav-number">3.</span> <span class="nav-text">Change Docker Reposition Address</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

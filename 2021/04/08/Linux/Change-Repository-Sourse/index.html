@@ -24,13 +24,13 @@
 
   <meta name="description" content="After you install some common softwares or programmers, usually the first thing you need to do is to change the source addresses of softwares or package managers for chinese users. Here are some commo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Change Repository Source">
+<meta property="og:title" content="Linux&#x2F;Change-Repository-Sourse">
 <meta property="og:url" content="https://qjbtiger.github.io/2021/04/08/Linux/Change-Repository-Sourse/index.html">
 <meta property="og:site_name" content="Qjbtiger&#39;s Home">
 <meta property="og:description" content="After you install some common softwares or programmers, usually the first thing you need to do is to change the source addresses of softwares or package managers for chinese users. Here are some commo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-08T08:15:22.000Z">
-<meta property="article:modified_time" content="2021-04-12T03:05:10.355Z">
+<meta property="article:modified_time" content="2021-11-14T15:32:46.384Z">
 <meta property="article:author" content="Qjbtiger">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Change Repository Source | Qjbtiger's Home</title>
+  <title>Linux/Change-Repository-Sourse | Qjbtiger's Home</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151094528-1"></script>
     <script>
@@ -217,7 +217,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Change Repository Source
+          Linux/Change-Repository-Sourse
         </h1>
 
         <div class="post-meta">
@@ -234,7 +234,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-12 11:05:10" itemprop="dateModified" datetime="2021-04-12T11:05:10+08:00">2021-04-12</time>
+                <time title="Modified: 2021-11-14 23:32:46" itemprop="dateModified" datetime="2021-11-14T23:32:46+08:00">2021-11-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,7 +247,7 @@
             </span>
 
           
-            <span id="/2021/04/08/Linux/Change-Repository-Sourse/" class="post-meta-item leancloud_visitors" data-flag-title="Change Repository Source" title="Views">
+            <span id="/2021/04/08/Linux/Change-Repository-Sourse/" class="post-meta-item leancloud_visitors" data-flag-title="Linux/Change-Repository-Sourse" title="Views">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -307,12 +307,12 @@
 </details>
 
 <h3 id="Respberry-Pi"><a href="#Respberry-Pi" class="headerlink" title="Respberry Pi"></a>Respberry Pi</h3><p>The first thing you need to do is finding the code name of your respbian system version by command <code>lsb_release -a</code></p>
-<p>Take an example whose code name is <strong>“buster”</strong>(Respberry Pi 4b):</p>
+<p>Take an example whose code name is <strong>“bullseye”</strong>(Respberry Pi 4b):</p>
 <p>Comment the original content and additional content you need to add in <code>/etc/apt/sources.list</code> file:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi</span><br></pre></td></tr></table></figure>
 
 <p>And in <code>/etc/apt/sources.list.d/raspi.list</code> file, you need to comment the original content as well and add:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bullseye main ui</span><br></pre></td></tr></table></figure>
 
 <p>If your system has another code name, just replace the code name part of the address and do the same thing.</p>
 <p>Don’t forget to execute <code>sudo apt-get update</code></p>
@@ -338,6 +338,35 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://registry.docker-cn.com <span class="comment"># Docker china official address</span></span><br><span class="line">https://kfwkfulq.mirror.aliyuncs.com <span class="comment"># Ali Cloud</span></span><br></pre></td></tr></table></figure>
 </details>
+
+<h2 id="Change-Homebrew-Reposition-Address-MacOS"><a href="#Change-Homebrew-Reposition-Address-MacOS" class="headerlink" title="Change Homebrew Reposition Address (MacOS)"></a>Change Homebrew Reposition Address (MacOS)</h2><h4 id="If-you-have’n-install-Homebrew"><a href="#If-you-have’n-install-Homebrew" class="headerlink" title="If you have’n install Homebrew"></a>If you have’n install Homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install</span><br><span class="line">/bin/bash brew-install/install.sh</span><br><span class="line">rm -rf brew-install</span><br></pre></td></tr></table></figure>
+
+<p>Then add environment path to <code>~/.zprofile</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.zprofile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"</span></span><br></pre></td></tr></table></figure>
+
+<p>If you use <strong>arm64 MacOS</strong> ,some extra steps are needed. Intel macOS doesn’t need it.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">test</span> -r ~/.zprofile &amp;&amp; <span class="built_in">echo</span> <span class="string">'eval "$(/opt/homebrew/bin/brew shellenv)"'</span> &gt;&gt; ~/.zprofile</span><br></pre></td></tr></table></figure>
+
+<h4 id="If-you-have-install-homebrew"><a href="#If-you-have-install-homebrew" class="headerlink" title="If you have install homebrew"></a>If you have install homebrew</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"</span></span><br><span class="line">brew update</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"</span></span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/core https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git</span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/cask https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git</span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/cask-fonts https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-fonts.git</span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/cask-drivers https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-drivers.git</span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/cask-versions https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask-versions.git</span><br><span class="line">brew tap --custom-remote --force-auto-update homebrew/<span class="built_in">command</span>-not-found https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-command-not-found.git</span><br><span class="line"></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+<p>Or use script here,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"</span></span><br><span class="line">brew update</span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"</span></span><br><span class="line"><span class="keyword">for</span> tap <span class="keyword">in</span> core cask&#123;,-fonts,-drivers,-versions&#125; <span class="built_in">command</span>-not-found; <span class="keyword">do</span></span><br><span class="line">    brew tap --custom-remote --force-auto-update <span class="string">"homebrew/<span class="variable">$&#123;tap&#125;</span>"</span> <span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-<span class="variable">$&#123;tap&#125;</span>.git"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">brew update</span><br></pre></td></tr></table></figure>
+
+<p>Adding environment paths to <code>~/.zprofile</code> is recommended.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.zprofile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"</span></span><br><span class="line">brew update</span><br><span class="line"><span class="built_in">export</span> HOMEBREW_CORE_GIT_REMOTE=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Restore-offical-reposition-assdress"><a href="#Restore-offical-reposition-assdress" class="headerlink" title="Restore offical reposition assdress"></a>Restore offical reposition assdress</h4><p>Use the script here,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">unset</span> HOMEBREW_BREW_GIT_REMOTE</span><br><span class="line">git -C <span class="string">"<span class="variable">$(brew --repo)</span>"</span> remote <span class="built_in">set</span>-url origin https://github.com/Homebrew/brew</span><br><span class="line"></span><br><span class="line"><span class="built_in">unset</span> HOMEBREW_CORE_GIT_REMOTE</span><br><span class="line">BREW_TAPS=<span class="string">"<span class="variable">$(BREW_TAPS="$(brew tap 2&gt;/dev/null)</span>"</span>; <span class="built_in">echo</span> -n <span class="string">"<span class="variable">$&#123;BREW_TAPS//$'\n'/:&#125;</span>"</span>)<span class="string">"</span></span><br><span class="line"><span class="string">for tap in core cask&#123;,-fonts,-drivers,-versions&#125; command-not-found; do</span></span><br><span class="line"><span class="string">    if [[ "</span>:<span class="variable">$&#123;BREW_TAPS&#125;</span>:<span class="string">" == *"</span>:homebrew/<span class="variable">$&#123;tap&#125;</span>:<span class="string">"* ]]; then  # 只复原已安装的 Tap</span></span><br><span class="line"><span class="string">        brew tap --custom-remote "</span>homebrew/<span class="variable">$&#123;tap&#125;</span><span class="string">" "</span>https://github.com/Homebrew/homebrew-<span class="variable">$&#123;tap&#125;</span><span class="string">"</span></span><br><span class="line"><span class="string">    fi</span></span><br><span class="line"><span class="string">done</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">brew update</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Homebrew-binary-precompile-images"><a href="#Homebrew-binary-precompile-images" class="headerlink" title="Homebrew binary precompile images"></a>Homebrew binary precompile images</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=<span class="string">"https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
     </div>
 
     
@@ -367,7 +396,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://qjbtiger.github.io/2021/04/08/Linux/Change-Repository-Sourse/" title="Change Repository Source">https://qjbtiger.github.io/2021/04/08/Linux/Change-Repository-Sourse/</a>
+    <a href="https://qjbtiger.github.io/2021/04/08/Linux/Change-Repository-Sourse/" title="Linux&#x2F;Change-Repository-Sourse">https://qjbtiger.github.io/2021/04/08/Linux/Change-Repository-Sourse/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -453,7 +482,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Apt-get-Repository-Source"><span class="nav-number">1.</span> <span class="nav-text">Change Apt-get Repository Source</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu20-04-LTS"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu20.04 LTS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Respberry-Pi"><span class="nav-number">1.2.</span> <span class="nav-text">Respberry Pi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Pip-Repository-Source"><span class="nav-number">2.</span> <span class="nav-text">Change Pip Repository Source</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Docker-Reposition-Address"><span class="nav-number">3.</span> <span class="nav-text">Change Docker Reposition Address</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Apt-get-Repository-Source"><span class="nav-number">1.</span> <span class="nav-text">Change Apt-get Repository Source</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu20-04-LTS"><span class="nav-number">1.1.</span> <span class="nav-text">ubuntu20.04 LTS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Respberry-Pi"><span class="nav-number">1.2.</span> <span class="nav-text">Respberry Pi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Pip-Repository-Source"><span class="nav-number">2.</span> <span class="nav-text">Change Pip Repository Source</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Docker-Reposition-Address"><span class="nav-number">3.</span> <span class="nav-text">Change Docker Reposition Address</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Homebrew-Reposition-Address-MacOS"><span class="nav-number">4.</span> <span class="nav-text">Change Homebrew Reposition Address (MacOS)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#If-you-have’n-install-Homebrew"><span class="nav-number">4.0.1.</span> <span class="nav-text">If you have’n install Homebrew</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#If-you-have-install-homebrew"><span class="nav-number">4.0.2.</span> <span class="nav-text">If you have install homebrew</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Restore-offical-reposition-assdress"><span class="nav-number">4.0.3.</span> <span class="nav-text">Restore offical reposition assdress</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Homebrew-binary-precompile-images"><span class="nav-number">4.0.4.</span> <span class="nav-text">Homebrew binary precompile images</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>7.19夏令营总结 | Qjbtiger's Home</title><meta name="author" content="Qjbtiger"><meta name="copyright" content="Qjbtiger"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="今天，我们仍然是做题目，深入动态规划，而我，则着重于区间动态规划。虽然今天只做了一道题，但对于这道题，我认为还是有些难度的。 数字游戏【题目】在你面前有一圈整数（一共n个），你要按顺序将其分为m个部分，各部分内的数字相加，相加所得的m个结果对10取模后再相乘，最终得到一个数k。游戏的要求是使你所得的k最大或者最小。 2 4 -1 3 例如，对于下面这圈数字（n&#x3D;4，m&#x3D;2）：2013年07月22日">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.19夏令营总结">
+<meta property="og:url" content="https://qjbtiger.github.io/Informatics%20In%20Junior/7.19%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Qjbtiger&#39;s Home">
+<meta property="og:description" content="今天，我们仍然是做题目，深入动态规划，而我，则着重于区间动态规划。虽然今天只做了一道题，但对于这道题，我认为还是有些难度的。 数字游戏【题目】在你面前有一圈整数（一共n个），你要按顺序将其分为m个部分，各部分内的数字相加，相加所得的m个结果对10取模后再相乘，最终得到一个数k。游戏的要求是使你所得的k最大或者最小。 2 4 -1 3 例如，对于下面这圈数字（n&#x3D;4，m&#x3D;2）：2013年07月22日">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://qjbtiger.github.io/assets/avatar.png">
+<meta property="article:published_time" content="2013-07-22T01:56:53.000Z">
+<meta property="article:modified_time" content="2019-10-29T08:05:56.000Z">
+<meta property="article:author" content="Qjbtiger">
+<meta property="article:tag" content="Informatics In Junior">
+<meta property="article:tag" content="Innovation class">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qjbtiger.github.io/assets/avatar.png"><link rel="shortcut icon" href="/assets/avatar.png"><link rel="canonical" href="https://qjbtiger.github.io/Informatics%20In%20Junior/7.19%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="31UufUvWYIY39hZzAY7Vcpe1nGVInI99kHkUOjZSI08"/><meta name="baidu-site-verification" content="YmYhsrko4y"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-151094528-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-151094528-1');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":5,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: Qjbtiger","link":"Link: ","source":"Source: Qjbtiger's Home","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '7.19夏令营总结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-10-29 16:05:56'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Qjbtiger's Home"><span class="site-name">Qjbtiger's Home</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">7.19夏令营总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2013-07-22T01:56:53.000Z" title="Created 2013-07-22 09:56:53">2013-07-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2019-10-29T08:05:56.000Z" title="Updated 2019-10-29 16:05:56">2019-10-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Informatics-In-Junior/">Informatics In Junior</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word Count:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading Time:</span><span>8mins</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="7.19夏令营总结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">Comments:</span><a href="/Informatics%20In%20Junior/7.19%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>今天，我们仍然是做题目，深入动态规划，而我，则着重于区间动态规划。虽然今天只做了一道题，但对于这道题，我认为还是有些难度的。</p>
+<h2 id="数字游戏"><a href="#数字游戏" class="headerlink" title="数字游戏"></a>数字游戏</h2><p>【题目】在你面前有一圈整数（一共n个），你要按顺序将其分为m个部分，各部分内的数字相加，相加所得的m个结果对10取模后再相乘，最终得到一个数k。游戏的要求是使你所得的k最大或者最小。</p>
+<p>2</p>
+<p>4</p>
+<p>-1</p>
+<p>3</p>
+<p>例如，对于下面这圈数字（n=4，m=2）：<br>2013年07月22日 - 邱俊斌 - 邱俊斌<br>当要求最小值时，((2-1) mod 10)×((4+3) mod 10)=1×7=7，要求最大值时，为((2+4+3) mod 10)×(-1 mod 10)=9×9=81。特别值得注意的是，无论是负数还是正数，对10取模的结果均为非负值。</p>
+<p>求最大值和最小值。</p>
+<p>【输入】</p>
+<p>4 2</p>
+<p>4</p>
+<p>3</p>
+<p>-1</p>
+<p>2</p>
+<p>【输出】</p>
+<p>7</p>
+<p>81</p>
+<p>【分析】看上去，这一道题似乎无从下手。但明显的，我们知道这一道题目，我们可以用动态规划来下手。但是，而动态规划的核心，就在于子问题。</p>
+<p>在不考虑环形结构的情况下，以样例为例[4,3,-1,2]，因为我们要把这4个数分成两份，所以</p>
+<p>我们可以单独把[4]分1份，那么[3,-1,2]分成1份，就是子问题（下图红色部分），</p>
+<p>也可以把[4,3]分1份，那么[-1,2] 分成1份，就是子问题（下图蓝色部分），</p>
+<p>也可以把[4,3,-1]分1份，那么[2] 分成1份，就是子问题（下图绿色部分）。</p>
+<p>他不见了。</p>
+<p>子问题是解决了，那么状态转移方程也可以列出来了，按照石子归并的方法，用F[i][j]表示从i到j的m个区间的最大值（最小值）。但是，我们总觉得少了什么东西，就是如何表示它的份数呢？</p>
+<p>没错，我们需要开多一维（事实上，我们可以优化掉的），F[i][j][k]表示从第i位到第j位，分成k个区间的最大值，或最小值，由上可知状态转移方程，如下：</p>
+<p>sum[i][j]表示从第i位到第j位的总和后，模10，如果模10后为负数，应自加10。</p>
+<p>对于环形的问题，我们完全可以用能量项链的方法，复制一段在数据后面，每一段都进行一次DP。</p>
+<p>接下来要注意的就是</p>
+<p>① 就像石子归并，以长度分阶段，枚举左端点，确定右端点</p>
+<p>② sum[i][j]可以预处理，sum[i][j]=sum[i][j-1]+num[j],sum[0][0]=num[0]。</p>
+<p>③ DP前，如果是求最大值，那么DP数组F应清为负无穷，求最小值则相反</p>
+<p>④ 当区间为1时，F[i][j][1]=sum[i][j]</p>
+<p>⑤ 疑问：在DP时，为什么枚举区间K时，要放在最外层，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> K=<span class="number">2</span>;K&lt;=m; K++)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> len=K; len&lt;=n; len++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> L=x; L&lt;=n-len+x; L++) &#123;</span><br><span class="line">            <span class="keyword">int</span> R=L+len<span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> mid=L; mid!=R; mid++)</span><br><span class="line">                F[L][R][K]=<span class="built_in">max</span>(F[L][R][K],F[mid+<span class="number">1</span>][R][K<span class="number">-1</span>] * sum[L][mid]);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>而不能放在循环最四层</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> len=K; len&lt;=n; len++)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> L=x; L&lt;=n-len+x; L++) &#123;</span><br><span class="line">        <span class="keyword">int</span> R=L+len<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> mid=L; mid!=R; mid++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> K=<span class="number">2</span>;K&lt;=(len-mid+<span class="number">1</span>) &amp;&amp; K&lt;=m; K++)</span><br><span class="line">                F[L][R][K]=<span class="built_in">max</span>(F[L][R][K],F[mid+<span class="number">1</span>][R][K<span class="number">-1</span>] * sum[L][mid]);</span><br><span class="line">        &#125;（实践可以）</span><br></pre></td></tr></table></figure>
+
+<p>【程序】</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ifstream <span class="title">fin</span><span class="params">(<span class="string">"Game.in"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">fout</span><span class="params">(<span class="string">"Game.out"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> double_maxn 100+10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxm 10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> oo 100000000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> sum[double_maxn][double_maxn];</span><br><span class="line"><span class="keyword">int</span> num[double_maxn],n,m;</span><br><span class="line"><span class="keyword">int</span> F[double_maxn][double_maxn][maxm];</span><br><span class="line"><span class="keyword">int</span> maxx=-oo,minn=oo;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    fin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=n; ++i)</span><br><span class="line">        fin &gt;&gt; num[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">perpare</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=n; ++i)</span><br><span class="line">        num[i+n]=num[i];</span><br><span class="line"></span><br><span class="line">    sum[<span class="number">0</span>][<span class="number">0</span>]=num[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=<span class="number">2</span>*n; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=<span class="number">2</span>*n; ++j)</span><br><span class="line">            <span class="keyword">if</span> (!(i==<span class="number">0</span> &amp;&amp; j==<span class="number">0</span>))</span><br><span class="line">                sum[i][j]=(sum[i][j<span class="number">-1</span>]+num[j]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=<span class="number">2</span>*n; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=<span class="number">2</span>*n; ++j) &#123;</span><br><span class="line">            sum[i][j]=(sum[i][j]+oo) % <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">work1</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=<span class="number">2</span>*n; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=<span class="number">2</span>*n; ++j) &#123;</span><br><span class="line">            F[i][j][<span class="number">1</span>]=sum[i][j];<span class="comment">//区间为1时，实际上值为sum[i][j]</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">2</span>; k&lt;=m; k++)</span><br><span class="line">                F[i][j][k]=-oo;<span class="comment">//清为负无穷</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> K=<span class="number">2</span>;K&lt;=m; K++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len=K; len&lt;=n; len++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> L=x; L&lt;=n-len+x; L++) &#123;</span><br><span class="line">                <span class="keyword">int</span> R=L+len<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> mid=L; mid!=R; mid++)</span><br><span class="line">                    F[L][R][K]=<span class="built_in">max</span>(F[L][R][K],F[mid+<span class="number">1</span>][R][K<span class="number">-1</span>] * sum[L][mid]);<span class="comment">//状态转移方程</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> F[x][y<span class="number">-1</span>][m];<span class="comment">//返回</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">work2</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=<span class="number">2</span>*n; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=<span class="number">2</span>*n; ++j) &#123;</span><br><span class="line">            F[i][j][<span class="number">1</span>]=sum[i][j];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">2</span>; k&lt;=m; k++)</span><br><span class="line">                F[i][j][k]=oo; <span class="comment">//清为正无穷</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> K=<span class="number">2</span>;K&lt;=m; K++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len=<span class="number">2</span>; len&lt;=n; len++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> L=x; L&lt;=n-len+x; L++) &#123;</span><br><span class="line">                <span class="keyword">int</span> R=L+len<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> mid=L; mid!=R; mid++)</span><br><span class="line">                    F[L][R][K]=<span class="built_in">min</span>(F[L][R][K],F[mid+<span class="number">1</span>][R][K<span class="number">-1</span>] * sum[L][mid]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> F[x][y<span class="number">-1</span>][m]; <span class="comment">//返回</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    fout &lt;&lt; minn &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    fout &lt;&lt; maxx &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">read</span>();<span class="comment">//输入</span></span><br><span class="line"></span><br><span class="line">    perpare();<span class="comment">//解决环形问题</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> t=<span class="number">0</span>; t!=n; ++t) &#123;</span><br><span class="line">        <span class="keyword">int</span> tmp1=work1(t,t+n);<span class="comment">//求最大</span></span><br><span class="line">        <span class="keyword">int</span> tmp2=work2(t,t+n);<span class="comment">//求最小</span></span><br><span class="line">        maxx=<span class="built_in">max</span>(maxx,tmp1);</span><br><span class="line">        minn=<span class="built_in">min</span>(minn,tmp2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">write</span>();<span class="comment">//输出</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【优化】</p>
+<p>① 其实，求最大最小值的DP，极为类似，我们可以优化成一段DP</p>
+<p>② 求sum[i][j]，我们可以用前缀和的方法，用ans[i]表示前i位的和，那么sum[i][j]=ans[j]-ans[i-1]。那么，空间上可以降一维，求和时，时间上，也可以降一维。</p>
+<p>③ 其实，我们是先DP区间为2是的情况；然后再DP区间为3的情况……那么，我们完全可用滚动数组的方式，把F数组降一维。尽管那一维，只有10位，但是，这种思想有时是值得肯定的。</p>
+<p>【优化程序】</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ifstream <span class="title">fin</span><span class="params">(<span class="string">"Game.in"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">fout</span><span class="params">(<span class="string">"Game.out"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> double_maxn 100+10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> oo 100000000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> DP[double_maxn][double_maxn];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num[double_maxn],sum[double_maxn];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line">DP maxF,minF,maxF_new,minF_new;</span><br><span class="line"><span class="keyword">int</span> maxx=-oo,minn=oo;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    fin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=n; ++i) &#123;</span><br><span class="line">        fin &gt;&gt; num[i];</span><br><span class="line">        num[i]=(num[i]+oo) % <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">perpare</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i!=n; ++i)</span><br><span class="line">        num[i+n]=num[i];</span><br><span class="line"></span><br><span class="line">    sum[<span class="number">0</span>]=num[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i!=<span class="number">2</span>*n; ++i)</span><br><span class="line">        sum[i]=(sum[i<span class="number">-1</span>]+num[i]) % <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x==y) <span class="keyword">return</span> num[x];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> (sum[y]-sum[x<span class="number">-1</span>]+oo) % <span class="number">10</span>;</span><br><span class="line">&#125;<span class="comment">//使用前缀和</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">work</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> &amp;ans1, <span class="keyword">int</span> &amp;ans2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=x; i!=y; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=y; ++j) &#123;</span><br><span class="line">            maxF[i][j]=<span class="built_in">get</span>(i,j);</span><br><span class="line">            minF[i][j]=<span class="built_in">get</span>(i,j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> K=<span class="number">2</span>;K&lt;=m; K++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=x; i!=y; ++i)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i; j!=y; ++j) &#123;</span><br><span class="line">                maxF_new[i][j]=-oo;</span><br><span class="line">                minF_new[i][j]=oo;</span><br><span class="line">            &#125;<span class="comment">//边界</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> len=K; len&lt;=n; len++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> L=x; L&lt;=n-len+x; L++) &#123;</span><br><span class="line">                <span class="keyword">int</span> R=L+len<span class="number">-1</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> mid=L; mid!=R; mid++) &#123;</span><br><span class="line">                    maxF_new[L][R]=<span class="built_in">max</span>(maxF_new[L][R],maxF[mid+<span class="number">1</span>][R] * <span class="built_in">get</span>(L,mid));</span><br><span class="line"></span><br><span class="line">                    minF_new[L][R]=<span class="built_in">min</span>(minF_new[L][R],minF[mid+<span class="number">1</span>][R] * <span class="built_in">get</span>(L,mid));<span class="comment">//状态转移方程</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">memcpy</span>(maxF,maxF_new,<span class="keyword">sizeof</span>(maxF));</span><br><span class="line">        <span class="built_in">memcpy</span>(minF,minF_new,<span class="keyword">sizeof</span>(minF));<span class="comment">//更新滚动数组</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ans1=maxF[x][y<span class="number">-1</span>];</span><br><span class="line">    ans2=minF[x][y<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    fout &lt;&lt; minn &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    fout &lt;&lt; maxx &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">read</span>();</span><br><span class="line"></span><br><span class="line">    perpare();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> t=<span class="number">0</span>; t!=n; ++t) &#123;</span><br><span class="line">        <span class="keyword">int</span> tmp1,tmp2;</span><br><span class="line">        work(t,t+n,tmp1,tmp2);</span><br><span class="line"></span><br><span class="line">        maxx=<span class="built_in">max</span>(maxx,tmp1);</span><br><span class="line">        minn=<span class="built_in">min</span>(minn,tmp2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">write</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Qjbtiger.github.io">Qjbtiger</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://qjbtiger.github.io/Informatics%20In%20Junior/7.19%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/">https://qjbtiger.github.io/Informatics%20In%20Junior/7.19%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Informatics-In-Junior/">Informatics In Junior</a><a class="post-meta__tags" href="/tags/Innovation-class/">Innovation class</a></div><div class="post_share"><div class="social-share" data-image="/assets/avatar.png" data-sites="qq,wechat,twitter,facebook"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>Sponsor</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/asset/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/asset/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/Informatics%20In%20Junior/7.18%E5%A4%8F%E4%BB%A4%E8%90%A5%E6%80%BB%E7%BB%93/" title="7.18夏令营总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">7.18夏令营总结</div></div></a></div><div class="next-post pull-right"><a href="/Informatics%20In%20Junior/7.20%E6%B5%8B%E8%AF%95%EF%BC%8C7.21%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93/" title="7.20测试，7.21调试总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">7.20测试，7.21调试总结</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/Informatics%20In%20Junior/1%E6%9C%8818%E5%8F%B7%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%93/" title="1月18号创新班总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-01-22</div><div class="title">1月18号创新班总结</div></div></a></div><div><a href="/Informatics%20In%20Junior/1%E6%9C%8818%E5%8F%B7%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%932/" title="1月18号创新班总结2"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-01-29</div><div class="title">1月18号创新班总结2</div></div></a></div><div><a href="/Informatics%20In%20Junior/5.25%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%93/" title="5.25创新班总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-05-30</div><div class="title">5.25创新班总结</div></div></a></div><div><a href="/Informatics%20In%20Junior/5.11%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%93/" title="5.11创新班总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-05-24</div><div class="title">5.11创新班总结</div></div></a></div><div><a href="/Informatics%20In%20Junior/3.9%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%93/" title="3.9创新班总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-03-16</div><div class="title">3.9创新班总结</div></div></a></div><div><a href="/Informatics%20In%20Junior/3.19%E5%88%9B%E6%96%B0%E7%8F%AD%E6%80%BB%E7%BB%93/" title="3.19创新班总结"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2013-03-21</div><div class="title">3.19创新班总结</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Qjbtiger</div><div class="author-info__description">Enjoy myself!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">39</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qjbtiger"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qjbtiger" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to my blog!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F"><span class="toc-number">1.</span> <span class="toc-text">数字游戏</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By Qjbtiger</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://ss86688668-hexo.hf.space',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.29/dist/twikoo.all.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://ss86688668-hexo.hf.space',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      GLOBAL_CONFIG_SITE.isPost && getCount()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

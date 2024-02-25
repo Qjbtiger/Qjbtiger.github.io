@@ -4,15 +4,13 @@
     <title>Hexo Useful Commands</title>
     <url>/Hexo/Hexo-Useful-Commands/</url>
     <content><![CDATA[<p>Record some useful commands for maintaining Hexo website.</p>
-<a id="more"></a>
-
+<span id="more"></span>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Supposing you have install <strong>Git</strong> and <strong>Nodejs</strong>.</p>
 <p>Install:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h2 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h2><h3 id="Create-a-new-article"><a href="#Create-a-new-article" class="headerlink" title="Create a new article"></a>Create a new article</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br><span class="line">hexo new <span class="string">"Hello"</span> <span class="comment"># simplest example</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Generate-amp-Publish"><a href="#Generate-amp-Publish" class="headerlink" title="Generate &amp; Publish"></a>Generate &amp; Publish</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate <span class="comment"># generate static files</span></span><br><span class="line">hexo deploy <span class="comment"># deploy to github or other code repository</span></span><br><span class="line">hexo g -d <span class="comment"># take both actions</span></span><br><span class="line">hexo d -g <span class="comment"># same as above</span></span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h2><h3 id="Create-a-new-article"><a href="#Create-a-new-article" class="headerlink" title="Create a new article"></a>Create a new article</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br><span class="line">hexo new <span class="string">&quot;Hello&quot;</span> <span class="comment"># simplest example </span></span><br></pre></td></tr></table></figure>
+<h2 id="Generate-amp-Publish"><a href="#Generate-amp-Publish" class="headerlink" title="Generate &amp; Publish"></a>Generate &amp; Publish</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate <span class="comment"># generate static files</span></span><br><span class="line">hexo deploy <span class="comment"># deploy to github or other code repository</span></span><br><span class="line">hexo g -d <span class="comment"># take both actions</span></span><br><span class="line">hexo d -g <span class="comment"># same as above</span></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
